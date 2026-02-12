@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <title>Unerwartete Situation</title>
@@ -7,37 +7,43 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #f2f2f2;
   padding: 40px;
 }
 .card {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-size: 20px;
 }
 h1 {
   color: #444;
 }
+.role {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #777;
+}
 </style>
 </head>
 <body>
 
-<h1>Unerwartete Situation</h1>
-<div class="card" id="Situation"></div>
+<h1>Unerwartete Ausgabe</h1>
+<div class="role">Rolle: Alleinerziehende Mutter mit 3 Kindern</div>
+<div class="card" id="situation"></div>
 
 <script>
-const Situation = [
-"Broken washingmachine – you have to buy a new one. Pay 250 €.",
-"Your child needs 15 € for a school trip.",
-"The electricity bill got higher – you have to pay monthly 40 € more.",
-"You are ill – 3 days wages lost.",
-"Your car needs a repair – -300 €."
+const situationen = [
+"Die Waschmaschine ist kaputt. Neue Maschine kostet 250 €.",
+"Jedes Kind braucht 12 € für einen Schulausflug.",
+"Die Stromrechnung ist höher als erwartet: +45 €.",
+"Ein Kind braucht neue Winterschuhe: 60 €.",
+"Du bist krank und kannst 4 Tage nicht arbeiten."
 ];
 
-const random = Situation[Math.floor(Math.random() * situace.length)];
-document.getElementById("Situation").innerText = random;
+const zufall = situationen[Math.floor(Math.random() * situationen.length)];
+document.getElementById("situation").innerText = zufall;
 </script>
 
 </body>
