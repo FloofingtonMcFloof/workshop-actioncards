@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Unerwartete Situation</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 20px;
+}
+h1 {
+  color: #444;
+}
+</style>
+</head>
+<body>
+
+<h1>Unerwartete Situation</h1>
+<div class="card" id="Situation"></div>
+
+<script>
+const Situation = [
+"Broken washingmachine – you have to buy a new one. Pay 250 €.",
+"Your child needs 15 € for a school trip.",
+"The electricity bill got higher – you have to pay monthly 40 € more.",
+"You are ill – 3 days wages lost.",
+"Your car needs a repair – -300 €."
+];
+
+const random = Situation[Math.floor(Math.random() * situace.length)];
+document.getElementById("Situation").innerText = random;
+</script>
+
+</body>
+</html>
