@@ -2,48 +2,83 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Unerwartete Situation</title>
+<title>Unerwartetes Ereignis</title>
+
 <style>
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f2f2f2;
-  padding: 40px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
 }
+
+.container {
+  text-align: center;
+}
+
+.role {
+  margin-bottom: 15px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
 .card {
   background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #333;
+  padding: 40px;
+  border-radius: 20px;
+  width: 320px;
+  min-height: 150px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pop 0.6s ease-out;
 }
+
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 h1 {
-  color: #444;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
 }
-.role {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #777;
+
+.amount {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e74c3c;
 }
 </style>
+
 </head>
 <body>
 
-<h1>Unerwartete Ausgabe</h1>
-<div class="role">Rolle: Alleinerziehende Mutter mit 3 Kindern</div>
-<div class="card" id="situation"></div>
+<div class="container">
+  <h1>🎲 EREIGNIS 🎲</h1>
+  <div class="role">Rolle: Alleinerziehende Mutter</div>
+  <div class="card" id="situation">...</div>
+</div>
 
 <script>
 const situationen = [
-"Die Waschmaschine ist kaputt. Neue Maschine kostet 250 €.",
-"Jedes Kind braucht 12 € für einen Schulausflug.",
-"Die Stromrechnung ist höher als erwartet: +45 €.",
-"Ein Kind braucht neue Winterschuhe: 60 €.",
-"Du bist krank und kannst 4 Tage nicht arbeiten."
+"💥 Die Waschmaschine ist kaputt! <br><br><span class='amount'>-250 €</span>",
+"⚠️ Schulausflug für 3 Kinder. <br><br><span class='amount'>-36 €</span>",
+"🔥 Strompreise steigen. <br><br><span class='amount'>-45 €</span>",
+"👟 Neue Schuhe für ein Kind. <br><br><span class='amount'>-60 €</span>",
+"🤒 4 Tage krank – kein Einkommen!"
 ];
 
 const zufall = situationen[Math.floor(Math.random() * situationen.length)];
-document.getElementById("situation").innerText = zufall;
+document.getElementById("situation").innerHTML = zufall;
 </script>
 
 </body>
