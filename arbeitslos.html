@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Unerwartete Situation</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 20px;
+}
+h1 { color: #444; }
+.role {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #777;
+}
+</style>
+</head>
+<body>
+
+<h1>Unerwartete Ausgabe</h1>
+<div class="role">Rolle: Seit 6 Monaten arbeitslos</div>
+<div class="card" id="situation"></div>
+
+<script>
+const situationen = [
+"Das Auto braucht dringend eine Reparatur: 400 €.",
+"Das Handy geht kaputt – neues Handy: 200 €.",
+"Du musst eine unbezahlte Rechnung begleichen: 120 €.",
+"Deine Krankenversicherung verlangt eine Nachzahlung: 90 €.",
+"Ein Bewerbungsgespräch in einer anderen Stadt – Reisekosten 70 €."
+];
+
+const zufall = situationen[Math.floor(Math.random() * situationen.length)];
+document.getElementById("situation").innerText = zufall;
+</script>
+
+</body>
+</html>
